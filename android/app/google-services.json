@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "93769579543",
+    "firebase_url": "https://loja-cosmeticos.firebaseio.com",
+    "project_id": "loja-cosmeticos",
+    "storage_bucket": "loja-cosmeticos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93769579543:android:bfdbabeb7d11e1d7",
+        "android_client_info": {
+          "package_name": "com.trsouza.anny_cosmeticos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93769579543-eeflmpqrpevkjp0hfnvbc8n9b6u4ueje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trsouza.anny_cosmeticos",
+            "certificate_hash": "a292b33841d1b237cc25dd73d2f730f3ecb3baf5"
+          }
+        },
+        {
+          "client_id": "93769579543-vsr4jdb1nvcvghiq15j3vcnhudplh2pe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhIgQIQQx57G5H7rJ9_Olk_SDkNOpurlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93769579543-vsr4jdb1nvcvghiq15j3vcnhudplh2pe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
