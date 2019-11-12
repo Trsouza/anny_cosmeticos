@@ -62,7 +62,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                     decoration: InputDecoration(hintText: "Senha"),
                     obscureText:
                         true, //impede o usuário de ver a senh que está sendo digitada
-                    validator: (texto) {
+                    validator: (texto){
                       if (texto.isEmpty || texto.length < 6)
                         return "Senha inválida";
                     },

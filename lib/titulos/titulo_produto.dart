@@ -63,7 +63,7 @@ class TituloProduto extends StatelessWidget {
                 child: Image.network(
                   produto.imagens[0],
                   fit: BoxFit.cover,
-                  height: 250.0,
+                  height: 220.0,  // tamanho da imagem na lista
                 ),
               ),
               Flexible(

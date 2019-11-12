@@ -28,19 +28,22 @@ class _ScreenProdutoState extends State<ScreenProduto> {
       appBar: AppBar(
         title: Text(produto.titulo),
         centerTitle: true,
+        
       ),
       body: ListView(
         children: <Widget>[
           AspectRatio(aspectRatio: 0.9,
             child: Carousel(
               images: produto.imagens.map((url){
+                
                 return NetworkImage(url);
               }).toList(),
-              dotSize: 4.0,
-              dotSpacing: 15.0,
+              dotSize: 2.0,
+              dotSpacing: 10.0,
               dotBgColor: Colors.transparent,
               dotColor: _primaryColor,
               autoplay: false, // se fosse true, as imagens ficariam se alterando sozinhas
+              
             ), 
           ),
           Padding(padding: EdgeInsets.all(16.0),
@@ -58,15 +61,15 @@ class _ScreenProdutoState extends State<ScreenProduto> {
               Text(
                 "R\$ ${produto.preco.toStringAsFixed(2)}",
                 style: TextStyle(
-                  fontSize: 22.0,
+                  fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                   color: _primaryColor
 
                 ),
               ),
-              Text(
-                "Quantidade"
-              ),
+              // Text(
+              //   "Quantidade"
+              // ),
               // EditableText(
 
               // ),
@@ -82,10 +85,12 @@ class _ScreenProdutoState extends State<ScreenProduto> {
                         produtoCarrinho.qtd = 1;
                         produtoCarrinho.idProduto = produto.id;
                         produtoCarrinho.categoria = produto.categoria;
+                        produtoCarrinho.produto = produto;
 
                         CarrinhoModel.of(context).adicionarItem(produtoCarrinho);
                         //aqui eu poderia abrir direto o carrinho, com o mesmo codigo abaixo, 
                         // ou abrir uma tela perguntando se o usuário quer ir para o carrinho
+                        
 
                       }else{
                         Navigator.of(context).push(
@@ -124,4 +129,7 @@ class _ScreenProdutoState extends State<ScreenProduto> {
       ),
     );
   }
+
+
+  
 }

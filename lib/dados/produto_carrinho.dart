@@ -23,7 +23,7 @@ class ProdutoCarrinho{
       "categoria": categoria,
       "idProduto": idProduto,
       "qtd": qtd,
-      // "produto": produto.retornarMap()
+       "produto": produto.resumoCompra()
     };
   }
 

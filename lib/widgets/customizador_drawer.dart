@@ -48,13 +48,13 @@ class CustomizadorDrawer extends StatelessWidget {
                     // ),
                     Positioned(
                         // bottom: -40.0,
-                        left: 10.0,
+                        left: 40.0,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Image.asset(
                               "assets/images/anny_cosmeticos.png",
-                              width: 220.0,
+                              width: 150.0,
                             ),
                           ],
                         )),

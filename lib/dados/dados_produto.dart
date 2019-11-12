@@ -16,4 +16,12 @@ class DadosProduto{
     imagens =snap.data["imagens"];
   }
 
+  Map<String, dynamic>resumoCompra(){
+    return{
+      "titulo": titulo,
+      "descricao": descricao,
+      "preco":preco
+    };
+  }
+
 }
