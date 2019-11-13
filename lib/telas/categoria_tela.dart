@@ -1,12 +1,12 @@
 import 'package:anny_cosmeticos/dados/dados_produto.dart';
-import 'package:anny_cosmeticos/titulos/titulo_produto.dart';
+import 'package:anny_cosmeticos/tiles/produto_tile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class ScreenCategoria extends StatelessWidget {
+class CategoriaTela extends StatelessWidget {
   final DocumentSnapshot snap;
 
-  ScreenCategoria(this.snap);
+  CategoriaTela(this.snap);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class ScreenCategoria extends StatelessWidget {
                       itemBuilder: (context, index){
                         DadosProduto dadosProduto = DadosProduto.fromDocument(snapshot.data.documents[index]);
                         dadosProduto.categoria = this.snap.documentID;
-                        return TituloProduto("grid", dadosProduto);
+                        return ProdutoTile("grid", dadosProduto);
                       }
                   ),
                   ListView.builder(
@@ -62,7 +62,7 @@ class ScreenCategoria extends StatelessWidget {
                       itemBuilder: (context, index){
                         DadosProduto dadosProduto = DadosProduto.fromDocument(snapshot.data.documents[index]);
                         dadosProduto.categoria = this.snap.documentID;
-                        return TituloProduto("list", dadosProduto);
+                        return ProdutoTile("list", dadosProduto);
                       }
                   )
                 ]            

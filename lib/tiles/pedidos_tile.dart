@@ -3,9 +3,9 @@ import 'dart:collection';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class TituloPedidos extends StatelessWidget {
+class PedidosTile extends StatelessWidget {
   final String pedidoId;
-  TituloPedidos(this.pedidoId);
+  PedidosTile(this.pedidoId);
 
   @override
   Widget build(BuildContext context) {

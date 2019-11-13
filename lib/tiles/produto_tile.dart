@@ -1,23 +1,23 @@
 import 'package:anny_cosmeticos/dados/dados_produto.dart';
-import 'package:anny_cosmeticos/screens/screen_produto.dart';
+import 'package:anny_cosmeticos/telas/produto_tela.dart';
 import 'package:flutter/material.dart';
 
-class TituloProduto extends StatelessWidget {
+class ProdutoTile extends StatelessWidget {
 
   final String tipo;
   final DadosProduto produto;
 
-  TituloProduto(this.tipo, this.produto);
+  ProdutoTile(this.tipo, this.produto);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => ScreenProduto(produto))
+          MaterialPageRoute(builder: (context) => ProdutoTela(produto))
         );
       },
-      child: Card( // se ipo for igual a grid, colocamos uma coluna, caso contrario uma linha
+      child: Card( // se tipo for igual a grid, colocamos uma coluna, caso contrario uma linha
         child: tipo == "grid" ?
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,

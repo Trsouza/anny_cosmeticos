@@ -1,11 +1,11 @@
-import 'package:anny_cosmeticos/tabs/home_tab.dart';
-import 'package:anny_cosmeticos/tabs/tab_pedidos.dart';
-import 'package:anny_cosmeticos/tabs/tab_produtos.dart';
+import 'package:anny_cosmeticos/abas/home_aba.dart';
+import 'package:anny_cosmeticos/abas/pedidos_aba.dart';
+import 'package:anny_cosmeticos/abas/produtos_aba.dart';
 import 'package:anny_cosmeticos/widgets/botao_carrinho.dart';
 import 'package:anny_cosmeticos/widgets/customizador_drawer.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeTela extends StatelessWidget {
   final _paginaController = PageController();
 
   @override
@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Scaffold(
-          body: HomeTab(),
+          body: HomeAba(),
           drawer: CustomizadorDrawer(_paginaController),
           floatingActionButton: BotaoCarrinho(),
         ),
@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: CustomizadorDrawer(_paginaController),
-          body: TabProdutos(),
+          body: ProdutosAba(),
           floatingActionButton: BotaoCarrinho(),
         ),
         Scaffold(
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
             title: Text("Meus Pedidos"),
             centerTitle: true,
           ),
-          body: TabPedidos(),
+          body: PedidosAba(),
           drawer: CustomizadorDrawer(_paginaController),
         ),
       ],

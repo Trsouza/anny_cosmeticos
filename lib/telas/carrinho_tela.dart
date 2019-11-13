@@ -1,14 +1,14 @@
 import 'package:anny_cosmeticos/models/carrinho_model.dart';
 import 'package:anny_cosmeticos/models/usuario_model.dart';
-import 'package:anny_cosmeticos/screens/screen_login.dart';
-import 'package:anny_cosmeticos/titulos/titulo_carrinho.dart';
-import 'package:anny_cosmeticos/widgets/cartao_desconto.dart';
-import 'package:anny_cosmeticos/widgets/cartao_frete.dart';
-import 'package:anny_cosmeticos/widgets/cartao_preco.dart';
+import 'package:anny_cosmeticos/telas/login_tela.dart';
+import 'package:anny_cosmeticos/tiles/carrinho_tile.dart';
+import 'package:anny_cosmeticos/widgets/desconto_cartao.dart';
+import 'package:anny_cosmeticos/widgets/frete_cartao.dart';
+import 'package:anny_cosmeticos/widgets/preco_cartao.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class ScreenCarrinho extends StatelessWidget {
+class CarrinhoTela extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +66,7 @@ class ScreenCarrinho extends StatelessWidget {
                     color: Theme.of(context).primaryColor,
                     onPressed: (){
                       Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context)=>ScreenLogin())
+                        MaterialPageRoute(builder: (context)=>LoginTela())
                       );
                     },
                     shape: new RoundedRectangleBorder(
@@ -87,9 +87,9 @@ class ScreenCarrinho extends StatelessWidget {
             return ListView(
               children: <Widget>[
                 Column(
-                  children: model.produtos.map( // pega cda produto e transforma em um TituloCarrinho
+                  children: model.produtos.map( // pega cada produto e transforma em um CarrinhoTile
                     (prod){
-                      return TituloCarrinho(prod);
+                      return CarrinhoTile(prod);
                     }
                   ).toList(),
                 ),

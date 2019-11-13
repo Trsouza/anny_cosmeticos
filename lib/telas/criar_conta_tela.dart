@@ -2,12 +2,13 @@ import 'package:anny_cosmeticos/models/usuario_model.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class ScreenCriarConta extends StatefulWidget {
+
+class CriarContaTela extends StatefulWidget {
   @override
-  _ScreenCriarContaState createState() => _ScreenCriarContaState();
+  _CriarContaTelaState createState() => _CriarContaTelaState();
 }
 
-class _ScreenCriarContaState extends State<ScreenCriarConta> {
+class _CriarContaTelaState extends State<CriarContaTela> {
   final _nomeControlador = TextEditingController();
   final _emailControlador = TextEditingController();
   final _senhaControlador = TextEditingController();

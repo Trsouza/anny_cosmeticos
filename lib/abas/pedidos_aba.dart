@@ -1,10 +1,9 @@
-import 'package:anny_cosmeticos/screens/screen_login.dart';
-import 'package:anny_cosmeticos/titulos/titulo_categoria.dart';
-import 'package:anny_cosmeticos/titulos/titulo_pedidos.dart';
+import 'package:anny_cosmeticos/telas/login_tela.dart';
+import 'package:anny_cosmeticos/tiles/pedidos_tile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:anny_cosmeticos/models/usuario_model.dart';
-class TabPedidos extends StatelessWidget {
+class PedidosAba extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    if(UsuarioModel.of(context).usuarioLogado()){
@@ -18,7 +17,7 @@ class TabPedidos extends StatelessWidget {
             child: CircularProgressIndicator(),
           );}else{
             return ListView(
-              children: snap.data.documents.map((doc) => TituloPedidos(doc.documentID)
+              children: snap.data.documents.map((doc) => PedidosTile(doc.documentID)
               ).toList() ,
             );
           }
@@ -55,7 +54,7 @@ class TabPedidos extends StatelessWidget {
                     color: Theme.of(context).primaryColor,
                     onPressed: (){
                       Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context)=>ScreenLogin())
+                        MaterialPageRoute(builder: (context)=>LoginTela())
                       );
                     },
                     shape: new RoundedRectangleBorder(

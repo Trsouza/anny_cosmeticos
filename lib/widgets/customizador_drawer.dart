@@ -1,6 +1,6 @@
 import 'package:anny_cosmeticos/models/usuario_model.dart';
-import 'package:anny_cosmeticos/screens/screen_login.dart';
-import 'package:anny_cosmeticos/titulos/titulos_drawer.dart';
+import 'package:anny_cosmeticos/telas/login_tela.dart';
+import 'package:anny_cosmeticos/tiles/drawer_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -54,7 +54,7 @@ class CustomizadorDrawer extends StatelessWidget {
                           children: <Widget>[
                             Image.asset(
                               "assets/images/anny_cosmeticos.png",
-                              width: 150.0,
+                              width: 180.0,
                             ),
                           ],
                         )),
@@ -87,7 +87,7 @@ class CustomizadorDrawer extends StatelessWidget {
                                       Navigator.of(context).push(
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  ScreenLogin()));
+                                                  LoginTela()));
                                     } else {
                                       model.sair();
                                     }
@@ -101,10 +101,10 @@ class CustomizadorDrawer extends StatelessWidget {
                 ),
               ),
               Divider(),
-              TituloDrawer(Icons.home, "Início", paginaController, 0),
-              TituloDrawer(Icons.list, "Produtos", paginaController, 1),
-              TituloDrawer(Icons.location_on, "Lojas", paginaController, 2),
-              TituloDrawer(Icons.playlist_add_check, "Meus Pedidos",
+              DrawerTile(Icons.home, "Início", paginaController, 0),
+              DrawerTile(Icons.list, "Produtos", paginaController, 1),
+              DrawerTile(Icons.location_on, "Lojas", paginaController, 2),
+              DrawerTile(Icons.playlist_add_check, "Meus Pedidos",
                   paginaController, 3),
             ],
           )

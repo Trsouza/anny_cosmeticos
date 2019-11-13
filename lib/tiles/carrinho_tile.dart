@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 
 //Representa cada item do carrinho
 
-class TituloCarrinho extends StatelessWidget {
+class CarrinhoTile extends StatelessWidget {
   final ProdutoCarrinho produtoCarrinho;
 
-  TituloCarrinho(this.produtoCarrinho);
+  CarrinhoTile(this.produtoCarrinho);
 
   @override
   Widget build(BuildContext context) {

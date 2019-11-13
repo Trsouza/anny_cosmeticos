@@ -1,14 +1,14 @@
 import 'package:anny_cosmeticos/models/usuario_model.dart';
-import 'package:anny_cosmeticos/screens/screen_criar_conta.dart';
+import 'package:anny_cosmeticos/telas/criar_conta_tela.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class ScreenLogin extends StatefulWidget {
+class LoginTela extends StatefulWidget {
   @override
-  _ScreenLoginState createState() => _ScreenLoginState();
+  _LoginTelaState createState() => _LoginTelaState();
 }
 
-class _ScreenLoginState extends State<ScreenLogin> {
+class _LoginTelaState extends State<LoginTela> {
   final _formKey = GlobalKey<FormState>();
   final _emailControlador = TextEditingController();
   final _senhaControlador = TextEditingController();
@@ -106,7 +106,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                           // pushReplacement - evitar eu voltar para a tela de entrar, voltarei para o drawer
 
                           MaterialPageRoute(
-                              builder: (context) => ScreenCriarConta()));
+                              builder: (context) => CriarContaTela()));
                     },
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),

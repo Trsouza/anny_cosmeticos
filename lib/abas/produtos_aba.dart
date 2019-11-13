@@ -1,8 +1,8 @@
-import 'package:anny_cosmeticos/titulos/titulo_categoria.dart';
+import 'package:anny_cosmeticos/tiles/categoria_tile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class TabProdutos extends StatelessWidget {
+class ProdutosAba extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<QuerySnapshot>(
@@ -15,7 +15,7 @@ class TabProdutos extends StatelessWidget {
         else {
           var dividirTitulos = ListTile.divideTiles(
             tiles: snapshot.data.documents.map((doc) {
-              return TituloCategoria(doc);
+              return CategoriaTile(doc);
             }).toList(),
             color: Colors.grey[500],
           ).toList();

@@ -1,4 +1,4 @@
-import 'package:anny_cosmeticos/screens/screen_carrinho.dart';
+import 'package:anny_cosmeticos/telas/carrinho_tela.dart';
 import 'package:flutter/material.dart';
 
 class BotaoCarrinho extends StatelessWidget {
@@ -8,7 +8,7 @@ class BotaoCarrinho extends StatelessWidget {
       child: Icon(Icons.shopping_cart, color:Colors.white),
       onPressed: (){
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context)=>ScreenCarrinho())
+          MaterialPageRoute(builder: (context)=>CarrinhoTela())
         );
       },
       backgroundColor: Theme.of(context).primaryColor,

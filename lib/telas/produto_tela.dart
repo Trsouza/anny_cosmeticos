@@ -2,24 +2,24 @@ import 'package:anny_cosmeticos/dados/dados_produto.dart';
 import 'package:anny_cosmeticos/dados/produto_carrinho.dart';
 import 'package:anny_cosmeticos/models/carrinho_model.dart';
 import 'package:anny_cosmeticos/models/usuario_model.dart';
-import 'package:anny_cosmeticos/screens/screen_login.dart';
+import 'package:anny_cosmeticos/telas/login_tela.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
-class ScreenProduto extends StatefulWidget {
+class ProdutoTela extends StatefulWidget {
 
   final DadosProduto produto;
 
-  ScreenProduto(this.produto);
+  ProdutoTela(this.produto);
 
   @override
-  _ScreenProdutoState createState() => _ScreenProdutoState(produto);
+  _ProdutoTelaState createState() => _ProdutoTelaState(produto);
 }
 
-class _ScreenProdutoState extends State<ScreenProduto> {
+class _ProdutoTelaState extends State<ProdutoTela> {
   final  DadosProduto produto;
   // String tam =null;
-  _ScreenProdutoState(this.produto);
+  _ProdutoTelaState(this.produto);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,6 @@ class _ScreenProdutoState extends State<ScreenProduto> {
       appBar: AppBar(
         title: Text(produto.titulo),
         centerTitle: true,
-        
       ),
       body: ListView(
         children: <Widget>[
@@ -94,7 +93,7 @@ class _ScreenProdutoState extends State<ScreenProduto> {
 
                       }else{
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context)=> ScreenLogin())
+                          MaterialPageRoute(builder: (context)=> LoginTela())
                         );
                       }
                     } , //: null,
@@ -128,8 +127,5 @@ class _ScreenProdutoState extends State<ScreenProduto> {
         ],
       ),
     );
-  }
-
-
-  
+  } 
 }

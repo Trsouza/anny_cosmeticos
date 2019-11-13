@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TituloDrawer extends StatelessWidget {
+class DrawerTile extends StatelessWidget {
   final IconData icone;
   final String texto;
   final PageController controller;
   final int pagina;
 
-  TituloDrawer(this.icone, this.texto, this.controller, this.pagina);
+  DrawerTile(this.icone, this.texto, this.controller, this.pagina);
 
   @override
   Widget build(BuildContext context) {
